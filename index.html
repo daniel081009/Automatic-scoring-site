@@ -2,45 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>검정고시</title>
-    <script type="module">
-      import data from "./data.json" assert { type: "json" };
-      console.log(data);
-    </script>
+    <title>검정고시 자동 채첨</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
   <body>
-    <h1>검정고시</h1>
-    <div class="input-view">
-      <select>
-        <option value="초졸">초졸</option>
-        <option value="중졸">중졸</option>
-        <option value="고졸">고졸</option>
-      </select>
-      <select name="year">
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-        <option value="2015">2015</option>
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2014">2018</option>
-        <option value="2015">2019</option>
-        <option value="2016">2020</option>
-        <option value="2017">2021</option>
-        <option value="2017">2022</option>
-      </select>
-      <select name="part">
-        <option value="1">1분기</option>
-        <option value="2">2분기</option>
-      </select>
-    </div>
+    <main-page></main-page>
   </body>
   <style>
+    html,
     body {
-      background-color: rgb(26, 26, 26);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 0;
+      padding: 0;
     }
   </style>
+
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+  <script type="module" src="./src/main.js"></script>
 </html>
