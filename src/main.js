@@ -38,6 +38,7 @@ class print extends LitElement {
     let stop = false;
 
     this.list.forEach((item) => {
+      if (stop) return;
       this.tmp[item] = [];
       this.data[item].forEach((d, i) => {
         if (stop) return;
@@ -166,11 +167,37 @@ class print extends LitElement {
         atmp[item] = 100 - wrong_answer[item].length * 4;
       }
     });
+
+    Toastify({
+      text: "점수가 계산되었습니다",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(to right, blue, green)",
+      },
+    }).showToast();
     console.log(atmp);
     let sum = 0;
     this.list.map((item) => {
       sum += atmp[item];
     });
+
+    Toastify({
+      text: "평균 점수가 계산되었습니다",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(to right, blue, green)",
+      },
+    }).showToast();
     sum /= this.list.length;
     return html`
       <div class="print">
