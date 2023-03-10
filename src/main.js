@@ -105,7 +105,6 @@ class print extends LitElement {
                             id="${item}_${i}"
                             name="${item}cho_${i}"
                             value="${itemd}"
-                            checked
                           />
                           <label for="${itemd}">${itemd}</label>
                         </div>
